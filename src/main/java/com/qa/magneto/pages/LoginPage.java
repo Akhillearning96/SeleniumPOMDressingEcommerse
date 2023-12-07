@@ -30,10 +30,12 @@ public class LoginPage {
 	public String isCreateAccBtnPresent() {
 		return  driver.findElement(createAccBtn).getText();
 	}
-	public void doLogin(String un , String pwd) {
+	public AccountPage doLogin(String un , String pwd) {
 		driver.findElement(username).sendKeys(un);
 		driver.findElement(password).sendKeys(pwd);
 		driver.findElement(signInBtn).click();
+		
+		return new AccountPage(driver);
 		
 	}
 	

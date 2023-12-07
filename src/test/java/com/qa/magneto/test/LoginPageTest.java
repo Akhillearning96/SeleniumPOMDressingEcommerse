@@ -25,7 +25,8 @@ public class LoginPageTest extends BaseTest {
 	}
 	@Test(priority=4)
 	public void doLoginTest() {
-		loginpage.doLogin("akhil.chennuru95@gmail.com", "5100aA@123");
+		loginpage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		Assert.assertEquals(accountPage.getAccPageTitle(), Constants.ACCOUNT_PAGE_TITLE);
 		
 	}
 	

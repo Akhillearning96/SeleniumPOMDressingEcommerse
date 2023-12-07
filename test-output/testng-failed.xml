@@ -5,10 +5,12 @@
     <classes>
       <class name="com.qa.magneto.test.LoginPageTest">
         <methods>
+          <include name="doLoginTest"/>
           <include name="loginPageTitleTest"/>
           <include name="headerTitleTest"/>
           <include name="teardown"/>
           <include name="setup"/>
+          <include name="createAccountBtnTest"/>
         </methods>
       </class> <!-- com.qa.magneto.test.LoginPageTest -->
     </classes>

@@ -1,5 +1,10 @@
 package com.qa.magnet.factory;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -7,10 +12,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	public WebDriver driver;
+	Properties prop;
 	
-	
-	
-	public WebDriver init_driver(String browserName) {
+	public WebDriver init_driver(Properties prop) {
+		String browserName = prop.getProperty("browser");
 		
 	 
 	 if(browserName.equals("chrome")) {
@@ -25,9 +30,24 @@ public class DriverFactory {
 	 
 	 driver.manage().window().maximize();
 	 driver.manage().deleteAllCookies();
-	 driver.get("https://magento.softwaretestingboard.com/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvLnNvZnR3YXJldGVzdGluZ2JvYXJkLmNvbS9jdXN0b21lci9hY2NvdW50L2xvZ291dFN1Y2Nlc3Mv/");
+	 driver.get(prop.getProperty("url"));
 		
 	 return driver;
+	}
+	public Properties init_properties() {
+		prop = new Properties();
+		try {
+			FileInputStream fi = new FileInputStream("./src/test/resources/Configration/Config.Properties");
+			prop.load(fi);
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
+		return prop;
 	}
 
 }
