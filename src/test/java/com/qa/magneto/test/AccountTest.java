@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.magneto.utils.Constants;
@@ -33,6 +34,19 @@ public class AccountTest extends BaseTest {
 	public void accountPageLinksTest() {
 		List<String> accPageData = accountPage.accPageLinks();
 		Assert.assertEquals(accPageData, Constants.accPageLinksCheck());
+	}
+	@DataProvider
+	public Object[][] productSearch() {
+		return new Object[][] {
+				{"yoga"},
+				{"mens pant"},
+				{"Troy yoga Short"}
+				
+		};
+	}
+	@Test(dataProvider = "productSearch")
+	public void searchProdTest(String prodName) {
+		accountPage.doSearch(prodName);
 	}
 	
 

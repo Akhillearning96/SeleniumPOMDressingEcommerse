@@ -1,4 +1,5 @@
 package com.qa.magneto.pages;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +23,7 @@ public class AccountPage {
 	private By HeaderDropDowns = By.xpath("//nav[@class='navigation']/ul[@id='ui-id-2']/li/a");
 	private By accountPageLinks = By.xpath("//ul[@class='nav items']/li/a");
 	private By signOut = By.linkText(" Sign Out ");
+	private By id = By.id("search");
 	
 	public String getAccPageTitle() {
 		return driver.getTitle();
@@ -50,6 +52,12 @@ public class AccountPage {
 	public boolean signOutLinkExist() {
 		eleUtil.clickElementWhenReady(HeaderDropDowns, 5);
 		return eleUtil.getElement(signOut).isDisplayed();
+	}
+	public void doSearch(String productName) {
+		eleUtil.doSendKeys(id, productName);
+		eleUtil.doClick(id);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.findElement(id).clear();
 	}
 	
 }
