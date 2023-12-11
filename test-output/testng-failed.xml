@@ -8,7 +8,7 @@
           <include name="accPagePreConditions"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="searchProdTest"/>
+          <include name="searchProdTest" invocation-numbers="0 1 2"/>
         </methods>
       </class> <!-- com.qa.magneto.test.AccountTest -->
     </classes>

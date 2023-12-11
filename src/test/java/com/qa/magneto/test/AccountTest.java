@@ -40,8 +40,7 @@ public class AccountTest extends BaseTest {
 		return new Object[][] {
 				{"yoga"},
 				{"mens pant"},
-				{"Troy yoga Short"}
-				
+				{"Troy yoga Short"}	
 		};
 	}
 	@Test(dataProvider = "productSearch")

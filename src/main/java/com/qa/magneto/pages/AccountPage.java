@@ -1,11 +1,12 @@
 package com.qa.magneto.pages;
-import java.time.Duration;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import com.qa.magneto.utils.ElementUtil;
 
 public class AccountPage {
@@ -23,7 +24,9 @@ public class AccountPage {
 	private By HeaderDropDowns = By.xpath("//nav[@class='navigation']/ul[@id='ui-id-2']/li/a");
 	private By accountPageLinks = By.xpath("//ul[@class='nav items']/li/a");
 	private By signOut = By.linkText(" Sign Out ");
-	private By id = By.id("search");
+	private By searchId = By.id("search");
+	private By id = By.id("search_autocomplete");
+	
 	
 	public String getAccPageTitle() {
 		return driver.getTitle();
@@ -54,10 +57,10 @@ public class AccountPage {
 		return eleUtil.getElement(signOut).isDisplayed();
 	}
 	public void doSearch(String productName) {
-		eleUtil.doSendKeys(id, productName);
-		eleUtil.doClick(id);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.findElement(id).clear();
+		eleUtil.doSendKeys(searchId, 5, productName);
+		eleUtil.getElement(searchId).sendKeys("Key.Enter");
+		eleUtil.getElement(searchId).clear();
+		
 	}
 	
 }
