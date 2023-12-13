@@ -9,6 +9,7 @@ public class Constants {
 	public static final String LOGIN_PAGE_CREATE_ACCOUNT_BUTTON = "Create an Account";
 	public static final String ACCOUNT_PAGE_TITLE = "My Account";
 	public static final String LOGIN_CONFIRM_MESSAGE = "Welcome, Akhil Chennuru!";
+	public static final String RESULT_PAGE_TITLE = "Search results for: 'yoga'";
 	
 	
 	public static final List<String> actHeaderDropDown() {

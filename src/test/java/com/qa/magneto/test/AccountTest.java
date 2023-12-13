@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.qa.magneto.pages.ProductInfoPage;
+import com.qa.magneto.pages.ResultPage;
 import com.qa.magneto.utils.Constants;
 
 public class AccountTest extends BaseTest {
@@ -20,33 +22,58 @@ public class AccountTest extends BaseTest {
 		String title = accountPage.getAccPageTitle();
 		Assert.assertEquals(title, Constants.ACCOUNT_PAGE_TITLE);
 	}
-//	@Test(priority =2)
-//	public void confirmMessageTest() {
-//		String text = accountPage.confirmLoginMessage();
-//		Assert.assertEquals(text, Constants.LOGIN_CONFIRM_MESSAGE);
-//	}
-	@Test(priority =3)
+	@Test(priority =2)
 	public void headerDropDownTest() {
 		List<String> actData = accountPage.headerDropDowns();
 		Assert.assertEquals(actData, Constants.actHeaderDropDown());
 	}
-	@Test(priority =4)
+	@Test(priority =3)
 	public void accountPageLinksTest() {
 		List<String> accPageData = accountPage.accPageLinks();
 		Assert.assertEquals(accPageData, Constants.accPageLinksCheck());
 	}
 	@DataProvider
-	public Object[][] productSearch() {
+	public Object[][] multiProdSearch() {
 		return new Object[][] {
-				{"yoga"},
-				{"mens pant"},
-				{"Troy yoga Short"}	
+			{"men t-shirt"},
+			{"lady t-shirt"}
 		};
 	}
-	@Test(dataProvider = "productSearch")
-	public void searchProdTest(String prodName) {
-		accountPage.doSearch(prodName);
+	@Test(priority = 4, dataProvider= "multiProdSearch")
+	public void multiProdSearchTest(String multiProdSearch) {
+		accountPage.doSearch(multiProdSearch);
 	}
+	
+	@DataProvider
+	public Object[][] productSearch() {
+		return new Object[][] {
+			
+				{"yoga"}
+		};
+	}
+	
+	@Test(priority =5,dataProvider = "productSearch")
+	public void searchProdTest(String prodName) {
+		 ResultPage resultPage = accountPage.doSearch(prodName);
+		String title = resultPage.getPageTitle();
+		Assert.assertEquals(title, Constants.RESULT_PAGE_TITLE);
+	}
+	@DataProvider
+	public Object[][] productSelect() {
+		return new Object[][] {
+				{"yoga","Selene Yoga Hoodie"}
+		};
+	}
+	@Test(priority =6,dataProvider="productSelect")
+	public void selectProductTest(String productName,String mainProductName) {
+		 ResultPage resultPage = accountPage.doSearch(productName);
+		ProductInfoPage productInfoPage =  resultPage.selectProduct(mainProductName);
+		
+		
+	}
+	
+	
+	
 	
 
 }

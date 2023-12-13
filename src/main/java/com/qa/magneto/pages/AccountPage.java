@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -25,7 +26,7 @@ public class AccountPage {
 	private By accountPageLinks = By.xpath("//ul[@class='nav items']/li/a");
 	private By signOut = By.linkText(" Sign Out ");
 	private By searchId = By.id("search");
-	private By id = By.id("search_autocomplete");
+	
 	
 	
 	public String getAccPageTitle() {
@@ -56,11 +57,11 @@ public class AccountPage {
 		eleUtil.clickElementWhenReady(HeaderDropDowns, 5);
 		return eleUtil.getElement(signOut).isDisplayed();
 	}
-	public void doSearch(String productName) {
-		eleUtil.doSendKeys(searchId, 5, productName);
-		eleUtil.getElement(searchId).sendKeys("Key.Enter");
-		eleUtil.getElement(searchId).clear();
-		
+	public ResultPage doSearch(String productName) {
+		eleUtil.WaitForTheElementToBeVisible(searchId, 10).sendKeys(productName);
+		eleUtil.getElement(searchId).sendKeys(Keys.ENTER);
+		eleUtil.WaitForTheElementToBeVisible(searchId, 10).clear();
+		return new ResultPage(driver);
 	}
 	
 }

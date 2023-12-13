@@ -9,6 +9,8 @@ import org.testng.annotations.BeforeTest;
 import com.qa.magnet.factory.DriverFactory;
 import com.qa.magneto.pages.AccountPage;
 import com.qa.magneto.pages.LoginPage;
+import com.qa.magneto.pages.ProductInfoPage;
+import com.qa.magneto.pages.ResultPage;
 
 public class BaseTest {
 	
@@ -17,6 +19,8 @@ public class BaseTest {
 	WebDriver driver;
 	LoginPage loginpage;
 	AccountPage accountPage;
+	ResultPage resultPage;
+	ProductInfoPage productInfoPage;
 	
 	
 	@BeforeTest
@@ -26,6 +30,7 @@ public class BaseTest {
 		driver = df.init_driver(prop);
 		loginpage = new LoginPage(driver);
 		accountPage = new AccountPage(driver);
+		resultPage = new ResultPage(driver);
 		
 	
 	}
