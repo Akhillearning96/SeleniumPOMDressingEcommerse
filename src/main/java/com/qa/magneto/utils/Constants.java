@@ -10,6 +10,7 @@ public class Constants {
 	public static final String ACCOUNT_PAGE_TITLE = "My Account";
 	public static final String LOGIN_CONFIRM_MESSAGE = "Welcome, Akhil Chennuru!";
 	public static final String RESULT_PAGE_TITLE = "Search results for: 'yoga'";
+	public static final String PRODUCT_INFO_PAGE_TITLE ="Selene Yoga Hoodie";
 	
 	
 	public static final List<String> actHeaderDropDown() {

@@ -22,13 +22,14 @@ public class ProductInfoPage {
 	private By productPrice = By.xpath("//div[@class='product-info-price']//span[@id='product-price-1108']");
 	private By sizeOfProd = By.cssSelector("div.swatch-attribute-options.clearfix div");
 	private By qtyRequired = By.xpath("//input[@id='qty']");
-	private By addToCart = By.xpath("//button[@id='product-addtocart-button']");
+	private By addToCart = By.xpath("//button[@id='product-addtocart-button']/span");
 	private By prodPictures = By.xpath("(//div[@class='fotorama__stage__shaft fotorama__grab']/div)[1]/img");
 	private By productInfoLink = By.xpath("(//a[@class='data switch'])[2]");
 	private By productInfoListKey = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/th");
 	private By productInfoListValue = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/td");
-	
-	
+	private By selectColor = By.xpath("//div[@id='option-label-color-93-item-57']");
+	private By selectCart = By.xpath("//a[@class='action showcart']");
+	private By productCountInAddToCart = By.xpath("//span[@class='counter-number']");
 	
 	public String getHeaderName() {
 		return eleUtil.getElement(headerName).getText();
@@ -37,10 +38,11 @@ public class ProductInfoPage {
 	public void prodImagesCount() {
 		WebElement element = eleUtil.getElement(prodPictures);
 	}
-	public void getProductData() {
+	public HashMap<String,String> getProductData() {
 		listOfData = new HashMap<String,String>();
 		costData();
 		prodListData();
+		return listOfData;
 	}
 	private void costData() {
 		String price = eleUtil.getElement(productPrice).getText();
@@ -56,6 +58,7 @@ public class ProductInfoPage {
 			listOfData.put(key, value);
 		}
 	}
+	
 	public void selectSizeOfProd(String size) {
 		List<WebElement> prodSize = eleUtil.getElements(sizeOfProd);
 		for(WebElement e : prodSize) {
@@ -63,17 +66,26 @@ public class ProductInfoPage {
 			if(proSize.equals(size)) {
 				System.out.println("size of product is :"+ proSize);
 				e.click();
-				
-				break;
+				break;	
 			}
+			
 		}
+	
+		
 	}
 	public void qtyRequiredToOrder(String num) {
 		eleUtil.getElement(qtyRequired).clear();
 		eleUtil.getElement(qtyRequired).sendKeys(num);
 	}
-	public void addToCart() {
-		eleUtil.getElement(addToCart).click();
+	public String addToCart() {
+		eleUtil.doClick(addToCart, 5);
+		return eleUtil.getElement(productCountInAddToCart).getText();
+	}
+	public void selectColor() {
+		eleUtil.doClick(selectColor);
+	}
+	public void openCart() {
+		eleUtil.doClick(selectCart);
 	}
 	
 	

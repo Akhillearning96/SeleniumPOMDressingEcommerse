@@ -1,86 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-12T05:45:37Z" name="Default suite" finished-at="2023-12-12T05:46:02Z" duration-ms="24855">
+  <suite started-at="2023-12-18T05:21:34Z" name="Default suite" finished-at="2023-12-18T05:22:00Z" duration-ms="26290">
     <groups>
     </groups>
-    <test started-at="2023-12-12T05:45:37Z" name="Default test" finished-at="2023-12-12T05:46:02Z" duration-ms="24855">
-      <class name="com.qa.magneto.test.AccountTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:37Z" name="setup" finished-at="2023-12-12T05:45:47Z" duration-ms="9895" status="PASS">
+    <test started-at="2023-12-18T05:21:34Z" name="Default test" finished-at="2023-12-18T05:22:00Z" duration-ms="26290">
+      <class name="com.qa.magneto.test.ProdInfoPageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:21:34Z" name="setup" finished-at="2023-12-18T05:21:43Z" duration-ms="8967" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="accPagePreConditions()[pri:0, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:47Z" name="accPagePreConditions" finished-at="2023-12-12T05:45:51Z" duration-ms="3855" status="PASS">
+        <test-method is-config="true" signature="prodPagePreConditions()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:21:43Z" name="prodPagePreConditions" finished-at="2023-12-18T05:21:59Z" duration-ms="16339" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accPagePreConditions -->
-        <test-method signature="getPageTitle()[pri:1, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:51Z" name="getPageTitle" finished-at="2023-12-12T05:45:51Z" duration-ms="27" status="PASS">
+        </test-method> <!-- prodPagePreConditions -->
+        <test-method signature="addToCartTest()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:21:59Z" name="addToCartTest" finished-at="2023-12-18T05:21:59Z" duration-ms="276" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [1] but found []]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [1] but found []
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at com.qa.magneto.test.ProdInfoPageTest.addToCartTest(ProdInfoPageTest.java:46)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getPageTitle -->
-        <test-method signature="headerDropDownTest()[pri:2, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:51Z" name="headerDropDownTest" finished-at="2023-12-12T05:45:51Z" duration-ms="209" status="PASS">
+        </test-method> <!-- addToCartTest -->
+        <test-method signature="headerNameTest()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:21:59Z" name="headerNameTest" finished-at="2023-12-18T05:21:59Z" duration-ms="39" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- headerDropDownTest -->
-        <test-method signature="accountPageLinksTest()[pri:3, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:51Z" name="accountPageLinksTest" finished-at="2023-12-12T05:45:51Z" duration-ms="105" status="PASS">
+        </test-method> <!-- headerNameTest -->
+        <test-method signature="productDataTest()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:21:59Z" name="productDataTest" finished-at="2023-12-18T05:22:00Z" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- accountPageLinksTest -->
-        <test-method signature="multiProdSearchTest(java.lang.String)[pri:4, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:51Z" name="multiProdSearchTest" data-provider="multiProdSearch" finished-at="2023-12-12T05:45:54Z" duration-ms="2595" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[men t-shirt]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- productDataTest -->
+        <test-method signature="selectProdSizeTest()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:22:00Z" name="selectProdSizeTest" finished-at="2023-12-18T05:22:00Z" duration-ms="349" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- multiProdSearchTest -->
-        <test-method signature="multiProdSearchTest(java.lang.String)[pri:4, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:54Z" name="multiProdSearchTest" data-provider="multiProdSearch" finished-at="2023-12-12T05:45:56Z" duration-ms="2367" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[lady t-shirt]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- multiProdSearchTest -->
-        <test-method signature="searchProdTest(java.lang.String)[pri:5, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:56Z" name="searchProdTest" data-provider="productSearch" finished-at="2023-12-12T05:45:58Z" duration-ms="1476" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yoga]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchProdTest -->
-        <test-method signature="selectProductTest(java.lang.String, java.lang.String)[pri:6, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:45:58Z" name="selectProductTest" data-provider="productSelect" finished-at="2023-12-12T05:46:02Z" duration-ms="4291" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yoga]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Selene Yoga Hoodie]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- selectProductTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.AccountTest@4b5a5ed1]" started-at="2023-12-12T05:46:02Z" name="teardown" finished-at="2023-12-12T05:46:02Z" duration-ms="0" status="PASS">
+        </test-method> <!-- selectProdSizeTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-18T05:22:00Z" name="teardown" finished-at="2023-12-18T05:22:00Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.qa.magneto.test.AccountTest -->
+      </class> <!-- com.qa.magneto.test.ProdInfoPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -31,6 +31,7 @@ public class BaseTest {
 		loginpage = new LoginPage(driver);
 		accountPage = new AccountPage(driver);
 		resultPage = new ResultPage(driver);
+		productInfoPage = new ProductInfoPage(driver);
 		
 	
 	}
