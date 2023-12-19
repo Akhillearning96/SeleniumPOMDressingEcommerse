@@ -22,7 +22,7 @@ public class ProductInfoPage {
 	private By productPrice = By.xpath("//div[@class='product-info-price']//span[@id='product-price-1108']");
 	private By sizeOfProd = By.cssSelector("div.swatch-attribute-options.clearfix div");
 	private By qtyRequired = By.xpath("//input[@id='qty']");
-	private By addToCart = By.xpath("//button[@id='product-addtocart-button']/span");
+	private By addToCart = By.id("product-addtocart-button");
 	private By prodPictures = By.xpath("(//div[@class='fotorama__stage__shaft fotorama__grab']/div)[1]/img");
 	private By productInfoLink = By.xpath("(//a[@class='data switch'])[2]");
 	private By productInfoListKey = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/th");

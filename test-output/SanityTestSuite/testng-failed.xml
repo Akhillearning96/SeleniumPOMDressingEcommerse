@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Failed suite [Regression Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" name="Test(failed)">
+<suite name="Failed suite [SanityTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="com.qa.magneto.test.ProdInfoPageTest">
         <methods>
@@ -16,4 +16,4 @@
       </class> <!-- com.qa.magneto.test.ProdInfoPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Regression Suite] -->
+</suite> <!-- Failed suite [SanityTestSuite] -->

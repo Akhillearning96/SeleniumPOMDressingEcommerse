@@ -7,24 +7,27 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	public WebDriver driver;
 	Properties prop;
+	OptionManager optionManager;
 	
 	public WebDriver init_driver(Properties prop) {
 		String browserName = prop.getProperty("browser");
+		optionManager = new OptionManager(prop);
 		
 	 
 	 if(browserName.equals("chrome")) {
 		 WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		 driver = new ChromeDriver(optionManager.getChromeOptions());
 		
 	 }else if(browserName.equals("firefox")) {
-		 WebDriverManager.chromedriver().setup();
-		 driver = new ChromeDriver();
+		WebDriverManager.firefoxdriver().setup();
+		 driver = new FirefoxDriver();
 		 
 	 }
 	 
