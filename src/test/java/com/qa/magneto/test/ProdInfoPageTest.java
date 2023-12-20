@@ -20,12 +20,12 @@ public class ProdInfoPageTest extends BaseTest {
 		ResultPage resultPage = accountPage.doSearch("yoga");
 		resultPage.selectProduct("Selene Yoga Hoodie");
 	}
-	@Test
+	@Test(priority = 1)
 	public void headerNameTest() {
 		String text = productInfoPage.getHeaderName();
 		AssertJUnit.assertEquals(text, Constants.PRODUCT_INFO_PAGE_TITLE);
 	}
-	@Test
+	@Test(priority = 2)
 	public void productDataTest() {
 		Map<String,String> data = productInfoPage.getProductData();
 		data.forEach((k,v)->System.out.println(k+":"+v));
@@ -36,14 +36,14 @@ public class ProdInfoPageTest extends BaseTest {
 		
 	}
 	
-	@Test
+	@Test(priority = 3)
 	public void selectProdSizeTest() {
 		productInfoPage.selectSizeOfProd("M");
 		productInfoPage.selectColor();
 		productInfoPage.qtyRequiredToOrder("1");
 		
 	}
-	@Test
+	@Test(priority = 4)
 	public void addToCartTest() {
 		String count = productInfoPage.addToCart();
 		//Assert.assertEquals(count, "1");

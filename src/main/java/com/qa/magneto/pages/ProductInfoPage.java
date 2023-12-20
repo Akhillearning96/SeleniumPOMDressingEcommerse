@@ -29,7 +29,8 @@ public class ProductInfoPage {
 	private By productInfoListValue = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/td");
 	private By selectColor = By.xpath("//div[@id='option-label-color-93-item-57']");
 	private By selectCart = By.xpath("//a[@class='action showcart']");
-	private By productCountInAddToCart = By.xpath("//span[@class='counter-number']");
+	private By addToCartClick = By.xpath("//span[@class='counter-number']");
+	private By countOfProductAdded = By.xpath("(//div[@class='items-total']/span)[1]");
 	
 	public String getHeaderName() {
 		return eleUtil.getElement(headerName).getText();
@@ -79,7 +80,8 @@ public class ProductInfoPage {
 	}
 	public String addToCart() {
 		eleUtil.doClick(addToCart, 5);
-		return eleUtil.getElement(productCountInAddToCart).getText();
+		eleUtil.doClick(addToCartClick);
+		return eleUtil.getElement(countOfProductAdded).getText();
 	}
 	public void selectColor() {
 		eleUtil.doClick(selectColor);
