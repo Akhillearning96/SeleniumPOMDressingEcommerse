@@ -1,5 +1,6 @@
 package com.qa.magneto.pages;
 
+import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
@@ -28,9 +29,9 @@ public class ProductInfoPage {
 	private By productInfoListKey = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/th");
 	private By productInfoListValue = By.xpath("//table[@id='product-attribute-specs-table']/tbody/tr/td");
 	private By selectColor = By.xpath("//div[@id='option-label-color-93-item-57']");
-	private By selectCart = By.xpath("//a[@class='action showcart']");
-	private By addToCartClick = By.xpath("//span[@class='counter-number']");
-	private By countOfProductAdded = By.xpath("(//div[@class='items-total']/span)[1]");
+	private By selectCart = By.xpath("//div[@class='minicart-wrapper']/a");
+	private By productCountAdded = By.xpath("//span[@class='count']");
+	private By proceedToCheckout = By.id("top-cart-btn-checkout");
 	
 	public String getHeaderName() {
 		return eleUtil.getElement(headerName).getText();
@@ -68,27 +69,29 @@ public class ProductInfoPage {
 				System.out.println("size of product is :"+ proSize);
 				e.click();
 				break;	
-			}
-			
+			}	
 		}
-	
-		
 	}
 	public void qtyRequiredToOrder(String num) {
 		eleUtil.getElement(qtyRequired).clear();
 		eleUtil.getElement(qtyRequired).sendKeys(num);
 	}
-	public String addToCart() {
+	public String addToCart() throws InterruptedException {
 		eleUtil.doClick(addToCart, 5);
-		eleUtil.doClick(addToCartClick);
-		return eleUtil.getElement(countOfProductAdded).getText();
+		Thread.sleep(5000);
+		eleUtil.WaitForTheElementToBeVisible(selectCart, 5).click();
+		
+		return eleUtil.getElement(productCountAdded).getText();
 	}
 	public void selectColor() {
 		eleUtil.doClick(selectColor);
 	}
-	public void openCart() {
-		eleUtil.doClick(selectCart);
+	public ShippingPage proceedToCheckout() {
+		eleUtil.doClick(proceedToCheckout);
+		return new ShippingPage(driver);
 	}
+	
+	
 	
 	
 }

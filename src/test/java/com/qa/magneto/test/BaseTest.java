@@ -11,6 +11,7 @@ import com.qa.magneto.pages.AccountPage;
 import com.qa.magneto.pages.LoginPage;
 import com.qa.magneto.pages.ProductInfoPage;
 import com.qa.magneto.pages.ResultPage;
+import com.qa.magneto.pages.ShippingPage;
 
 public class BaseTest {
 	
@@ -21,6 +22,7 @@ public class BaseTest {
 	AccountPage accountPage;
 	ResultPage resultPage;
 	ProductInfoPage productInfoPage;
+	ShippingPage shippingPage;
 	
 	
 	@BeforeTest
@@ -32,7 +34,7 @@ public class BaseTest {
 		accountPage = new AccountPage(driver);
 		resultPage = new ResultPage(driver);
 		productInfoPage = new ProductInfoPage(driver);
-		
+		shippingPage = new ShippingPage(driver);
 	
 	}
 	@AfterTest

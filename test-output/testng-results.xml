@@ -1,100 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-19T14:17:38Z" name="Default suite" finished-at="2023-12-19T14:18:01Z" duration-ms="23222">
+  <suite started-at="2023-12-22T09:00:43 IST" name="Default suite" finished-at="2023-12-22T09:01:08 IST" duration-ms="25054">
     <groups>
     </groups>
-    <test started-at="2023-12-19T14:17:38Z" name="Default test" finished-at="2023-12-19T14:18:01Z" duration-ms="23222">
+    <test started-at="2023-12-22T09:00:43 IST" name="Default test" finished-at="2023-12-22T09:01:08 IST" duration-ms="25054">
       <class name="com.qa.magneto.test.ProdInfoPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:17:38Z" name="setup" finished-at="2023-12-19T14:17:48Z" duration-ms="9587" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:00:43 IST" name="setup" finished-at="2023-12-22T09:00:52 IST" duration-ms="9355" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="prodPagePreConditions()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:17:48Z" name="prodPagePreConditions" finished-at="2023-12-19T14:18:01Z" duration-ms="12989" status="PASS">
+        <test-method is-config="true" signature="prodPagePreConditions()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:00:52 IST" name="prodPagePreConditions" finished-at="2023-12-22T09:01:00 IST" duration-ms="7582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prodPagePreConditions -->
-        <test-method signature="headerNameTest()[pri:1, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:18:01Z" name="headerNameTest" finished-at="2023-12-19T14:18:01Z" duration-ms="32" status="PASS">
+        <test-method signature="headerNameTest()[pri:1, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="headerNameTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- headerNameTest -->
-        <test-method signature="productDataTest()[pri:2, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:18:01Z" name="productDataTest" finished-at="2023-12-19T14:18:01Z" duration-ms="217" status="PASS">
+        <test-method signature="productDataTest()[pri:2, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="productDataTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="272" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productDataTest -->
-        <test-method signature="selectProdSizeTest()[pri:3, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:18:01Z" name="selectProdSizeTest" finished-at="2023-12-19T14:18:01Z" duration-ms="220" status="PASS">
+        <test-method signature="selectProdSizeTest()[pri:3, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="selectProdSizeTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="337" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectProdSizeTest -->
-        <test-method signature="addToCartTest()[pri:4, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:18:01Z" name="addToCartTest" finished-at="2023-12-19T14:18:01Z" duration-ms="140" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable: element has zero size
-  (Session info: chrome=120.0.6099.110)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c9185d9b818365295c077aabc2fe2ea8, clickElement {id=9A3A7ECC3DC96DB4CA8053C51A1DB79B_element_114}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64522}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64522/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c9185d9b818365295c077aabc2fe2ea8)] -> xpath: //span[@class='counter-number']]
-Session ID: c9185d9b818365295c077aabc2fe2ea8]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable: element has zero size
-  (Session info: chrome=120.0.6099.110)
-Build info: version: '4.10.0', revision: 'c14d967899'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c9185d9b818365295c077aabc2fe2ea8, clickElement {id=9A3A7ECC3DC96DB4CA8053C51A1DB79B_element_114}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.110, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64522}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64522/devtoo..., se:cdpVersion: 120.0.6099.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (c9185d9b818365295c077aabc2fe2ea8)] -> xpath: //span[@class='counter-number']]
-Session ID: c9185d9b818365295c077aabc2fe2ea8
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-at com.qa.magneto.utils.ElementUtil.doClick(ElementUtil.java:80)
-at com.qa.magneto.pages.ProductInfoPage.addToCart(ProductInfoPage.java:83)
-at com.qa.magneto.test.ProdInfoPageTest.addToCartTest(ProdInfoPageTest.java:48)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="addToCartTest()[pri:4, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="addToCartTest" finished-at="2023-12-22T09:01:06 IST" duration-ms="5258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@778d1062]" started-at="2023-12-19T14:18:01Z" name="teardown" finished-at="2023-12-19T14:18:01Z" duration-ms="0" status="PASS">
+        <test-method signature="proceedTOCartTest()[pri:5, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:06 IST" name="proceedTOCartTest" finished-at="2023-12-22T09:01:08 IST" duration-ms="2106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- proceedTOCartTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:08 IST" name="teardown" finished-at="2023-12-22T09:01:08 IST" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

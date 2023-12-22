@@ -44,11 +44,18 @@ public class ProdInfoPageTest extends BaseTest {
 		
 	}
 	@Test(priority = 4)
-	public void addToCartTest() {
+	public void addToCartTest() throws InterruptedException {
 		String count = productInfoPage.addToCart();
-		//Assert.assertEquals(count, "1");
+		Assert.assertEquals(count, "1");
 		
 	}
+	@Test(priority =5)
+	public void proceedTOCartTest() {
+		productInfoPage.proceedToCheckout();
+		Assert.assertEquals(shippingPage.pageTitle(),"Checkout");
+	}
+	
+	
 }
 	
 	
