@@ -28,7 +28,7 @@ public class ShippingPage {
 	private By zip = By.xpath("//input[@class='input-text' and @id='EVYS0EK']");
 	private By country = By.xpath("(//select[@class='select'])[2]");
 	private By phoneNo = By.xpath("By.xpath(\"//input[@class='input-text' and @id='J99JGR2']");
-	private By radioButton = By.xpath("(//input[@type='radio'])[1]");
+	private By radioButton = By.xpath("(//span[@class='price']/parent::td/preceding-sibling::td)[1]");
 	private By button = By.xpath("//button[@class='button action continue primary']");
 	
 	
@@ -38,14 +38,12 @@ public class ShippingPage {
 		
 	}
 	public String pageHeaderTitle() {
-		return eleUtil.doGetText(pageHeader);
+		return eleUtil.WaitForTheElementToBeVisible(pageHeader, 10).getText();
 	}
 	public void shippingPersonDetails(String streetName,String cityName,String state,String zipCode,String countryName,String phoneNum) {
-		eleUtil.doSendKeys(streetAddress, streetName);
-		eleUtil.doSendKeys(city, cityName);
-		eleUtil.doSendKeys(zip, zipCode);
-		eleUtil.doSendKeys(phoneNo,phoneNum);
-		Select st = new Select(eleUtil.getElement(province));
+		eleUtil.WaitForTheElementToBeVisible(streetAddress, 10).sendKeys(streetName);
+		eleUtil.WaitForTheElementToBeVisible(city, 10).sendKeys(cityName);
+		Select st = new Select(eleUtil.WaitForTheElementToBeVisible(province, 10));
 		List<WebElement> listOfState = st.getOptions();
 		for(WebElement e:listOfState) {
 			 String text = e.getText();
@@ -54,7 +52,8 @@ public class ShippingPage {
 				 break;
 			 }
 		}
-		Select sc = new Select(eleUtil.getElement(country));
+		eleUtil.doSendKeys(zip, zipCode);
+		Select sc = new Select(eleUtil.WaitForTheElementToBeVisible(country, 10));
 		List<WebElement>  listOfCountries = sc.getOptions();
 		for(WebElement e : listOfCountries) {
 			String text = e.getText();
@@ -63,7 +62,12 @@ public class ShippingPage {
 				break;
 			}
 		}
-	}
+		eleUtil.WaitForTheElementToBeVisible(phoneNo, 10).sendKeys(phoneNum);
+		
+		
+		eleUtil.clickElementWhenReady(radioButton, 10);
+		eleUtil.clickElementWhenReady(button, 10);
+		}
 	public List<String> itemCOnfirmTest() {
 		List<WebElement> list = eleUtil.getElements(itemAddConfirmation);
 		List<String> linkList = new ArrayList<String>();
@@ -73,5 +77,8 @@ public class ShippingPage {
 		}
 		return linkList;
 	}
+	
+
+
 
 }

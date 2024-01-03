@@ -1,41 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-22T09:00:43 IST" name="Default suite" finished-at="2023-12-22T09:01:08 IST" duration-ms="25054">
+  <suite started-at="2024-01-03T16:15:23 IST" name="Default suite" finished-at="2024-01-03T16:16:16 IST" duration-ms="52935">
     <groups>
     </groups>
-    <test started-at="2023-12-22T09:00:43 IST" name="Default test" finished-at="2023-12-22T09:01:08 IST" duration-ms="25054">
+    <test started-at="2024-01-03T16:15:23 IST" name="Default test" finished-at="2024-01-03T16:16:16 IST" duration-ms="52935">
       <class name="com.qa.magneto.test.ProdInfoPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:00:43 IST" name="setup" finished-at="2023-12-22T09:00:52 IST" duration-ms="9355" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:23 IST" name="setup" finished-at="2024-01-03T16:15:36 IST" duration-ms="12690" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="prodPagePreConditions()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:00:52 IST" name="prodPagePreConditions" finished-at="2023-12-22T09:01:00 IST" duration-ms="7582" status="PASS">
+        <test-method is-config="true" signature="prodPagePreConditions()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:36 IST" name="prodPagePreConditions" finished-at="2024-01-03T16:15:47 IST" duration-ms="11588" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prodPagePreConditions -->
-        <test-method signature="headerNameTest()[pri:1, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="headerNameTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="54" status="PASS">
+        <test-method signature="headerNameTest()[pri:1, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:48 IST" name="headerNameTest" finished-at="2024-01-03T16:15:48 IST" duration-ms="47" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- headerNameTest -->
-        <test-method signature="productDataTest()[pri:2, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="productDataTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="272" status="PASS">
+        <test-method signature="productDataTest()[pri:2, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:48 IST" name="productDataTest" finished-at="2024-01-03T16:15:48 IST" duration-ms="306" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productDataTest -->
-        <test-method signature="selectProdSizeTest()[pri:3, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="selectProdSizeTest" finished-at="2023-12-22T09:01:00 IST" duration-ms="337" status="PASS">
+        <test-method signature="selectProdSizeTest()[pri:3, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:48 IST" name="selectProdSizeTest" finished-at="2024-01-03T16:15:48 IST" duration-ms="309" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectProdSizeTest -->
-        <test-method signature="addToCartTest()[pri:4, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:00 IST" name="addToCartTest" finished-at="2023-12-22T09:01:06 IST" duration-ms="5258" status="PASS">
+        <test-method signature="addToCartTest()[pri:4, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:48 IST" name="addToCartTest" finished-at="2024-01-03T16:15:53 IST" duration-ms="5286" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [1] but found [2]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [1] but found [2]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.qa.magneto.test.ProdInfoPageTest.addToCartTest(ProdInfoPageTest.java:48)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addToCartTest -->
-        <test-method signature="proceedTOCartTest()[pri:5, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:06 IST" name="proceedTOCartTest" finished-at="2023-12-22T09:01:08 IST" duration-ms="2106" status="PASS">
+        <test-method signature="proceedTOCartTest()[pri:5, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:53 IST" name="proceedTOCartTest" finished-at="2024-01-03T16:15:55 IST" duration-ms="1904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- proceedTOCartTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@22ff4249]" started-at="2023-12-22T09:01:08 IST" name="teardown" finished-at="2023-12-22T09:01:08 IST" duration-ms="2" status="PASS">
+        <test-method signature="getShippingPageHeaderTest()[pri:6, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:15:55 IST" name="getShippingPageHeaderTest" finished-at="2024-01-03T16:16:06 IST" duration-ms="10294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getShippingPageHeaderTest -->
+        <test-method signature="shippingPersonDetailsTest()[pri:7, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:16:06 IST" name="shippingPersonDetailsTest" finished-at="2024-01-03T16:16:16 IST" duration-ms="10399" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of element located by By.xpath: //input[@class='input-text' and @id='C7CEDBK'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64623}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64623/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 871b4aca86c162ab6a7e4db805375b97]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //input[@class='input-text' and @id='C7CEDBK'] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.130, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\akhil\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64623}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64623/devtoo..., se:cdpVersion: 120.0.6099.130, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 871b4aca86c162ab6a7e4db805375b97
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+at com.qa.magneto.utils.ElementUtil.WaitForTheElementToBeVisible(ElementUtil.java:206)
+at com.qa.magneto.pages.ShippingPage.shippingPersonDetails(ShippingPage.java:44)
+at com.qa.magneto.test.ProdInfoPageTest.shippingPersonDetailsTest(ProdInfoPageTest.java:75)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:848)
+at org.testng.TestRunner.run(TestRunner.java:621)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shippingPersonDetailsTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.qa.magneto.test.ProdInfoPageTest@4c402120]" started-at="2024-01-03T16:16:16 IST" name="teardown" finished-at="2024-01-03T16:16:16 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

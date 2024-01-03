@@ -1,12 +1,11 @@
 package com.qa.magneto.test;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
-import org.testng.AssertJUnit;
 import java.util.Map;
 
 import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.qa.magneto.pages.ResultPage;
@@ -55,6 +54,29 @@ public class ProdInfoPageTest extends BaseTest {
 		Assert.assertEquals(shippingPage.pageTitle(),"Checkout");
 	}
 	
+	@Test(priority = 6)
+	public void getShippingPageHeaderTest() {
+		String header = shippingPage.pageHeaderTitle();
+		Assert.assertEquals(header, "Shipping Address");
+	}
+//	@DataProvider
+//	public Object[][] shippingData() {
+//		return new Object[][] {
+//			{"vaikuntapuram"},
+//			{"Anfotia"},
+//			{"Florida"},
+//			{"524201"},
+//			{"Tunisia"},
+//			{"9999999999"},
+//		};
+//	}
+	@Test(priority =7)
+	public void shippingPersonDetailsTest() {
+		shippingPage.shippingPersonDetails("vaikuntapuram","Anfotia","Florida","524201","Tunisia","999999999");
+		
+		
+		
+	}
 	
 }
 	

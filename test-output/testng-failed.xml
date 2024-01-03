@@ -5,6 +5,7 @@
     <classes>
       <class name="com.qa.magneto.test.ProdInfoPageTest">
         <methods>
+          <include name="shippingPersonDetailsTest"/>
           <include name="setup"/>
           <include name="teardown"/>
           <include name="prodPagePreConditions"/>
