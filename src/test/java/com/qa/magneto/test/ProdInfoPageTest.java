@@ -1,5 +1,11 @@
 package com.qa.magneto.test;
 
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
+import org.testng.AssertJUnit;
 import java.util.Map;
 
 import org.testng.Assert;
@@ -45,19 +51,19 @@ public class ProdInfoPageTest extends BaseTest {
 	@Test(priority = 4)
 	public void addToCartTest() throws InterruptedException {
 		String count = productInfoPage.addToCart();
-		Assert.assertEquals(count, "1");
+		AssertJUnit.assertEquals(count, "1");
 		
 	}
 	@Test(priority =5)
 	public void proceedTOCartTest() {
 		productInfoPage.proceedToCheckout();
-		Assert.assertEquals(shippingPage.pageTitle(),"Checkout");
+		AssertJUnit.assertEquals(shippingPage.pageTitle(),"Checkout");
 	}
 	
 	@Test(priority = 6)
 	public void getShippingPageHeaderTest() {
 		String header = shippingPage.pageHeaderTitle();
-		Assert.assertEquals(header, "Shipping Address");
+		AssertJUnit.assertEquals(header, "Shipping Address");
 	}
 //	@DataProvider
 //	public Object[][] shippingData() {

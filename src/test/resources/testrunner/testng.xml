@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Dressing Ecommerse Regression suite" thread-count="3" parallel="tests">
+	
+	<test name="Login Page Test">
+		
+		<classes>
+			<class name="com.qa.magneto.test.LoginPageTest" />
+		</classes>
+	</test>
+	<test name="Prod Info Page Test">
+		
+		<classes>
+			<class name="com.qa.magneto.test.ProdInfoPageTest" />
+		</classes>
+	</test>
+	<test name="Account Test">
+		
+		<classes>
+			<class name="com.qa.magneto.test.AccountTest" />
+		</classes>
+	</test>
+	
+	
+	
+	
+ 
+</suite> <!-- Suite -->

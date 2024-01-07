@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="3" parallel="tests" name="Test(failed)">
+    <classes>
+      <class name="com.qa.magneto.test.ProdInfoPageTest">
+        <methods>
+          <include name="shippingPersonDetailsTest"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="proceedTOCartTest"/>
+          <include name="prodPagePreConditions"/>
+          <include name="addToCartTest"/>
+          <include name="getShippingPageHeaderTest"/>
+        </methods>
+      </class> <!-- com.qa.magneto.test.ProdInfoPageTest -->
+      <class name="com.qa.magneto.test.LoginPageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="loginPageTitleTest"/>
+          <include name="teardown"/>
+          <include name="headerTitleTest"/>
+          <include name="createAccountBtnTest"/>
+          <include name="doLoginTest"/>
+        </methods>
+      </class> <!-- com.qa.magneto.test.LoginPageTest -->
+      <class name="com.qa.magneto.test.AccountTest">
+        <methods>
+          <include name="setup"/>
+          <include name="accountPageLinksTest"/>
+          <include name="accPagePreConditions"/>
+          <include name="getPageTitle"/>
+          <include name="multiProdSearchTest"/>
+          <include name="selectProductTest"/>
+          <include name="teardown"/>
+          <include name="searchProdTest"/>
+          <include name="headerDropDownTest"/>
+        </methods>
+      </class> <!-- com.qa.magneto.test.AccountTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
