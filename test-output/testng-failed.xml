@@ -8,7 +8,9 @@
           <include name="shippingPersonDetailsTest"/>
           <include name="setup"/>
           <include name="teardown"/>
+          <include name="addToCartTest"/>
           <include name="prodPagePreConditions"/>
+          <include name="getShippingPageHeaderTest"/>
         </methods>
       </class> <!-- com.qa.magneto.test.ProdInfoPageTest -->
     </classes>

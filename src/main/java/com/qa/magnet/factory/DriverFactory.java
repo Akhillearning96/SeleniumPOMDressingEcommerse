@@ -15,6 +15,7 @@ public class DriverFactory {
 	public WebDriver driver;
 	Properties prop;
 	OptionManager optionManager;
+	public ThreadLocal<WebDriver> tLocal = new ThreadLocal<WebDriver>();
 	
 	public WebDriver init_driver(Properties prop) {
 		String browserName = prop.getProperty("browser");
